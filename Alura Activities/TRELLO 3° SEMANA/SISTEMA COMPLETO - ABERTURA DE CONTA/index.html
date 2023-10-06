@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>       
+        const nomeCompleto = "Fulano de Tal";  
+        const dataNascimento = "01/01/1990";  
+        const cpf = "123.456.789-09";  
+        const email = "usuario@example.com";  
+        const celular = "987654321";  
+        const telefone = ""; 
+        const endereco = "R. das Flores, 195, Bairro Tristeza";  
+        const profissao = "Desenvolvedor";  
+        const salario = 6000;  
+        const senha = "1234";  
+        const mensagemDados = `Confirme seus dados:
+
+Nome: ${nomeCompleto}
+Data de Nascimento: ${dataNascimento}
+CPF: ${cpf}
+E-mail: ${email}
+Celular: ${celular}
+Telefone: ${telefone}
+Endereço: ${endereco}
+Cidade e Estado: ${cidadeEstado}
+Profissão: ${profissao}
+Salário: R$ ${salario}
+Senha: ${senha}`;
+
+        console.log(mensagemDados);
+
+        // Ofertas de cartão de crédito com base no salário
+        let limiteCartao;
+
+        if (salario > 5000) {
+            limiteCartao = salario * 0.31;
+        } else if (salario > 3000) {
+            limiteCartao = salario * 0.28;
+        } else if (salario > 1000) {
+            limiteCartao = salario * 0.20;
+        }
+
+        console.log(`Oferta de Cartão de Crédito:
+Limite: R$ ${limiteCartao.toFixed(2)}`);
+
+
+    </script>
+</body>
+
+</html>

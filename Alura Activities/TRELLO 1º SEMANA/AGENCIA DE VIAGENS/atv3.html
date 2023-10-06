@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function enviarEmailCliente(nome, destinos) {
+            console.log(`Olá, ${nome}! É um prazer termos você como cliente e estamos ansiosos para que sua viagem possa ocorrer em breve!`);
+            console.log("Estou te encaminhando os orçamentos:");
+
+            for (const destino of destinos) {
+                console.log(`\n  * ${destino.nome} *`);
+                console.log(`Passagens: R$ ${destino.passagens}`);
+                console.log(`Acomodação (${destino.dias} dias) de R$ ${destino.diaria}`);
+                console.log(`O guia local custará R$ ${destino.guia}`);
+                const total = destino.passagens + (destino.diaria * destino.dias) + destino.guia;
+                console.log(`Total R$ ${total}`);
+                console.log('\\---');
+            }
+        }
+
+
+        const nomeCliente = prompt("Digite o nome do cliente:");
+        const numeroDestinos = 3;
+
+
+        const destinos = [];
+
+        for (let i = 0; i < numeroDestinos; i++) {
+            const nomeDestino = prompt(`Digite o nome do destino ${i + 1}:`);
+            const passagens = parseFloat(prompt(`Digite o valor das passagens para ${nomeDestino}:`));
+            const diaria = parseFloat(prompt(`Digite o valor da diária do hotel para ${nomeDestino}:`));
+            const guia = parseFloat(prompt(`Digite o valor do guia local para ${nomeDestino}:`));
+            const dias = parseInt(prompt(`Digite a quantidade de dias de acomodação para ${nomeDestino}:`));
+
+            destinos.push({
+                nome: nomeDestino,
+                passagens: passagens,
+                diaria: diaria,
+                guia: guia,
+                dias: dias
+            });
+        }
+
+
+        enviarEmailCliente(nomeCliente, destinos);
+
+    </script>
+</body>
+
+</html>

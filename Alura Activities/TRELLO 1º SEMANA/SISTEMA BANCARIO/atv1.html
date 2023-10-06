@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const maxTentativas = 3;
+
+        // Senha correta
+        const senhaCorreta = "1234";
+
+        // Chave de segurança enviada por e-mail
+        const chaveSeguranca = "9999";
+
+        // Contador de tentativas
+        let tentativas = 0;
+
+        // armazenar se o cartão está bloqueado
+        let cartaoBloqueado = false;
+
+        // verificar a senha
+        function verificarSenha(senha) {
+            if (senha === senhaCorreta && !cartaoBloqueado) {
+                console.log("Senha correta. Compra realizada com sucesso!");
+            } else {
+                tentativas++;
+
+                if (tentativas === maxTentativas) {
+                    console.log("Senha incorreta. Seu cartão foi bloqueado.");
+                    cartaoBloqueado = true;
+
+                    // Solicitar ação do usuário
+                    const acao = prompt("Se deseja ir a uma agência, digite 'A'. Se deseja desbloquear com sua chave de segurança, digite 'D'.");
+
+                    if (acao === "A") {
+                        console.log("Será um prazer atendê-la em uma agência.");
+                    } else if (acao === "D") {
+                        // chave de segurança
+                        const chaveDigitada = prompt("Digite a chave de segurança que foi enviada para seu e-mail cadastrado.");
+
+                        if (chaveDigitada === chaveSeguranca) {
+                            console.log("Chave de segurança correta. Por favor, redefina sua senha.");
+                            // redefinir a senha...
+                        } else {
+                            console.log("Chave de segurança incorreta. Por favor, vá a uma agência.");
+                        }
+                    } else {
+                        console.log("Opção inválida. Por favor, vá a uma agência.");
+                    }
+                } else {
+                    console.log(`Senha incorreta. Tentativa ${tentativas}/${maxTentativas}.`);
+                }
+            }
+        }
+
+        // Testando a lógica com senhas
+        verificarSenha("1111");
+        verificarSenha("2222");
+        verificarSenha("3333");
+
+
+
+
+    </script>
+</body>
+
+</html>

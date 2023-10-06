@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validarCPF(cpf) {
+           
+            if (cpf.length !== 11) {
+                return "Ops! Seu CPF parece ser um número inválido. Tente novamente.";
+            } else {
+                return "Tudo certo! Vamos prosseguir.";
+            }
+        }
+
+        function validarEmail(email) {
+            if (!email.includes('@')) {
+                return "Ops! Tem certeza que esse e-mail está correto? Tente novamente.";
+            } else {
+                return "E-mail válido.";
+            }
+        }
+
+        function validarContato(celular, telefone) {
+            if (celular === '') {
+                return "Número de celular é obrigatório. Tente novamente.";
+            }
+
+            if (telefone === '') {
+                telefone = 'Não informado';
+            }
+
+            return `Celular: ${celular}\nTelefone: ${telefone}`;
+        }
+        //EXEMPLOS QUE PODEM SER USADOS
+        const resultadoCPF = validarCPF("12345678901");
+        console.log(resultadoCPF);
+
+        const resultadoEmail = validarEmail("usuario@dominio.com");
+        console.log(resultadoEmail);
+
+        const resultadoContato = validarContato("123456789", "");
+        console.log(resultadoContato);
+
+
+    </script>
+</body>
+
+</html>

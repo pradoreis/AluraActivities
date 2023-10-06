@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        function brlToForeignCurrency(value, exchangeRate) {
+            return value / exchangeRate;
+        }
+
+        
+        function foreignCurrencyToBRL(value, exchangeRate) {
+            return value * exchangeRate;
+        }
+
+       
+        const exchangeRateNZD = 3.25;  
+        const exchangeRateTHB = 0.15;  
+        const exchangeRateCRC = 0.0089;  
+
+      
+        const passagensNZD = 13996;
+        const diariaHotelNZD = 79.15;
+        const guiaLocalNZD = 200;
+
+        const passagensTHB = 9160;
+        const diariaHotelTHB = 590;
+        const guiaLocalTHB = 235;
+
+        const passagensCRC = 5119;
+        const diariaHotelCRC = 2300;
+        const guiaLocalCRC = 3150;
+
+        
+        const passagensNZDBRL = foreignCurrencyToBRL(passagensNZD, exchangeRateNZD);
+        const diariaHotelNZDBRL = foreignCurrencyToBRL(diariaHotelNZD, exchangeRateNZD);
+        const guiaLocalNZDBRL = foreignCurrencyToBRL(guiaLocalNZD, exchangeRateNZD);
+
+        const passagensTHBBRL = foreignCurrencyToBRL(passagensTHB, exchangeRateTHB);
+        const diariaHotelTHBBRL = foreignCurrencyToBRL(diariaHotelTHB, exchangeRateTHB);
+        const guiaLocalTHBBRL = foreignCurrencyToBRL(guiaLocalTHB, exchangeRateTHB);
+
+        const passagensCRCBRL = foreignCurrencyToBRL(passagensCRC, exchangeRateCRC);
+        const diariaHotelCRCBRL = foreignCurrencyToBRL(diariaHotelCRC, exchangeRateCRC);
+        const guiaLocalCRCBRL = foreignCurrencyToBRL(guiaLocalCRC, exchangeRateCRC);
+
+        
+        console.log("Destino: Nova Zelândia");
+        console.log("Passagens aéreas em NZD:", passagensNZDBRL.toFixed(2), "BRL");
+        console.log("Diária hotel em NZD:", diariaHotelNZDBRL.toFixed(2), "BRL");
+        console.log("Guia local em NZD:", guiaLocalNZDBRL.toFixed(2), "BRL");
+        console.log();
+
+        console.log("Destino: Tailândia");
+        console.log("Passagens aéreas em THB:", passagensTHBBRL.toFixed(2), "BRL");
+        console.log("Diária hotel em THB:", diariaHotelTHBBRL.toFixed(2), "BRL");
+        console.log("Guia local em THB:", guiaLocalTHBBRL.toFixed(2), "BRL");
+        console.log();
+
+        console.log("Destino: Costa Rica");
+        console.log("Passagens aéreas em CRC:", passagensCRCBRL.toFixed(2), "BRL");
+        console.log("Diária hotel em CRC:", diariaHotelCRCBRL.toFixed(2), "BRL");
+        console.log("Guia local em CRC:", guiaLocalCRCBRL.toFixed(2), "BRL");
+
+        //FIQUEI COM DIFICULDADE E PEGUEI AJUDA COM IAS!!
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var letras = [];  
+
+        for (let i = 0; i < 10; i++) {
+
+            var letra = prompt("Digite uma letra:");
+
+
+            if (/^[a-zA-Z]$/.test(letra)) {
+                letras.push(letra);
+            } else {
+                console.log("Entrada inválida. Digite uma única letra.");
+                i--;
+            }
+        }
+
+
+        console.log("Letras digitadas:", letras.join(", "));
+    </script>
+</body>
+
+</html>

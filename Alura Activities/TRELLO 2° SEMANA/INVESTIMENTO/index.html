@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Solicita ao cliente o valor que deseja investir
+        const valorInvestimento = parseFloat(prompt('Digite o valor que deseja investir (R$):'));
+
+        // Verifica se o valor é um número válido
+        if (isNaN(valorInvestimento) || valorInvestimento <= 0) {
+            alert('Por favor, insira um valor válido para investir.');
+        } else {
+            let mensagem = 'Você pode investir no seguinte plano:\n';
+
+            // Opção Start
+            if (valorInvestimento >= 1) {
+                mensagem += '- Start: Rendimento de 1,2% ao mês. Pode retirar a qualquer momento.\n';
+            }
+
+            // Opção Plus
+            if (valorInvestimento >= 100) {
+                mensagem += '- Plus: Rendimento de 1,78% ao mês. Pode retirar após 30 dias.\n';
+            }
+
+            // Opção Pro
+            if (valorInvestimento >= 500) {
+                mensagem += '- Pro: Rendimento variado de acordo com o tempo investido.\n';
+                const periodoInvestimento = parseInt(prompt('Digite o período de investimento (em meses):'));
+
+                if (periodoInvestimento >= 6) {
+                    mensagem += `   - Para ${periodoInvestimento} meses: Rendimento de 2,6% ao mês.\n`;
+
+                    if (periodoInvestimento >= 12) {
+                        mensagem += `   - Para 1 ano ou mais: Rendimento de 4,4% ao mês.\n`;
+                    }
+                } else {
+                    alert('Para o plano Pro, o período mínimo de investimento é de 6 meses.');
+                }
+            }
+
+            // Exibe as opções de investimento para o cliente
+            alert(mensagem);
+        }
+
+    </script>
+</body>
+
+</html>

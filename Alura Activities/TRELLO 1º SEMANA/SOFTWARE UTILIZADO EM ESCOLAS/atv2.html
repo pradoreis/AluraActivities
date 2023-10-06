@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function calcularMedia(nome, disciplina, prova, trabalho) {
+
+            var notaMaxima = 10;
+
+
+            var media = (prova + trabalho) / 2;
+
+
+            if (media < 7.0) {
+
+                console.log("ALERTA: O aluno(a) " + nome + " está abaixo da média em " + disciplina);
+                console.log("Média no bimestre em " + disciplina + ": " + media.toFixed(2));
+                console.log("-----");
+            }
+
+
+            return media;
+        }
+
+
+        var nomeAluno1 = "João";
+        var disciplinaAluno1 = "Matemática";
+        var provaAluno1 = 8.0;
+        var trabalhoAluno1 = 6.5;
+
+        var mediaAluno1 = calcularMedia(nomeAluno1, disciplinaAluno1, provaAluno1, trabalhoAluno1);
+
+        var nomeAluno2 = "Maria";
+        var disciplinaAluno2 = "Português";
+        var provaAluno2 = 6.5;
+        var trabalhoAluno2 = 7.5;
+
+        var mediaAluno2 = calcularMedia(nomeAluno2, disciplinaAluno2, provaAluno2, trabalhoAluno2);
+
+
+    </script>
+</body>
+
+</html>

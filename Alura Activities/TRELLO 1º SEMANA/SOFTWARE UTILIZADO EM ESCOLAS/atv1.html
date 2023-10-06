@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var notas = [];
+
+        alert("Insira as notas de seus alunos. Quando acabar, digite 'SAIR'.");
+
+        while (true) {
+            var nota = prompt("Digite a nota do aluno (ou 'SAIR' para finalizar):");
+
+            if (nota.toUpperCase() === "SAIR") {
+                break;
+            }
+
+            var notaNumero = parseFloat(nota);
+            if (!isNaN(notaNumero)) {
+                notas.push(notaNumero);
+            } else {
+                alert("Por favor, insira uma nota válida.");
+            }
+        }
+
+        var totalNotas = 0;
+        for (var i = 0; i < notas.length; i++) {
+            totalNotas += notas[i];
+        }
+
+        var mediaTurma = totalNotas / notas.length;
+
+        alert("A média da turma em Matemática é: " + mediaTurma.toFixed(2));
+
+    </script>
+</body>
+
+</html>

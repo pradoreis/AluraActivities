@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // O PROBLEMA ESTA NA LINHA DO NICKNAME.. NA CONST.. TEM QUE USAR LET AO INVÉS DE CONST.
+        //ESTE É O CÓDIGO CORRETO
+        
+        let nickname = prompt('Digite seu nome')
+
+        const resposta = prompt('Você deseja ser chamado igual ao seu nome? Digite SIM ou NAO')
+
+        if (resposta === 'N') {
+            nickname = prompt('Digite o nome pelo qual deseja ser chamado(a)')
+        }
+
+
+    </script>
+</body>
+
+</html>

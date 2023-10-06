@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const idade = 20;
+        const senha = "1234";
+
+
+        const idadeMinima = 18;
+
+        if (idade >= idadeMinima) {
+            console.log("Opção 1: Verificamos aqui e você pode abrir a sua conta conosco!");
+        } else {
+            const anosRestantes = idadeMinima - idade;
+            console.log(`Opção 2: Ops! Você ainda não tem a idade mínima para abrir uma conta conosco. Daqui ${anosRestantes} anos você poderá tentar novamente!`);
+        }
+
+        // Verificação de senha
+        const senhaNumerica = /^\d{4}$/;
+
+        if (!senha.match(senhaNumerica) || senha === "1234" || senha === "4321") {
+            console.log("Senha inválida: repita a instrução.");
+        } else {
+            console.log("Senha válida: prosseguir com o cadastro.");
+        }
+
+    </script>
+</body>
+
+</html>

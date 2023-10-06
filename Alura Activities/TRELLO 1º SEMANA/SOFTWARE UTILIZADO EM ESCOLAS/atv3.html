@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function escolherLider(aluno1, mediaPortugues1, mediaMatematica1, aluno2, mediaPortugues2, mediaMatematica2, aluno3, mediaPortugues3, mediaMatematica3) {
+
+            var alunos = [
+                { nome: aluno1, mediaPortugues: mediaPortugues1, mediaMatematica: mediaMatematica1 },
+                { nome: aluno2, mediaPortugues: mediaPortugues2, mediaMatematica: mediaMatematica2 },
+                { nome: aluno3, mediaPortugues: mediaPortugues3, mediaMatematica: mediaMatematica3 }
+            ];
+
+
+            alunos.sort(function (a, b) {
+                if (a.mediaPortugues !== b.mediaPortugues) {
+                    return b.mediaPortugues - a.mediaPortugues;
+                } else {
+                    return b.mediaMatematica - a.mediaMatematica;
+                }
+            });
+
+            // Exibir os resultados
+            console.log("Os alunos mais indicados para líder são:");
+
+            for (var i = 0; i < alunos.length; i++) {
+                console.log(alunos[i].nome + " - Média em Português: " + alunos[i].mediaPortugues + ", Média em Matemática: " + alunos[i].mediaMatematica);
+            }
+
+            // Retornar a média escolar em Língua Portuguesa do líder escolhido
+            return alunos[0].mediaPortugues;
+        }
+
+
+        var mediaLider = escolherLider("João", 8.5, 9.0, "Maria", 9.0, 8.5, "Pedro", 8.8, 8.8);
+
+        console.log("A média escolar do líder escolhido em Língua Portuguesa é: " + mediaLider);
+
+    </script>
+</body>
+
+</html>

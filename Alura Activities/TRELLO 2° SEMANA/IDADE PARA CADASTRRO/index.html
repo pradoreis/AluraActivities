@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const nomeCliente = prompt("Qual é o nome pelo qual deseja ser chamado?");
+
+
+        if (nomeCliente) {
+
+            const idadeCliente = parseInt(prompt("Qual é a sua idade?"));
+
+            // Verifica se o usuário inseriu uma idade válida
+            if (!isNaN(idadeCliente)) {
+
+                if (idadeCliente >= 18) {
+
+                    alert(`Olá, ${nomeCliente}! Bem-vindo ao Nubanco! Você está pronto para prosseguir com a abertura da sua conta.`);
+                } else {
+
+                    const anosRestantes = 18 - idadeCliente;
+
+                    alert(`Desculpe, ${nomeCliente}. Você ainda não atingiu a maioridade. Faltam ${anosRestantes} anos para abrir a sua conta.`);
+                }
+            } else {
+
+                alert("Por favor, insira uma idade válida.");
+            }
+        } else {
+
+            alert("Bem-vindo ao Nubanco!");
+        }
+
+    </script>
+</body>
+
+</html>

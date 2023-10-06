@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes de Jéssica</title>
+</head>
+
+<body>
+
+    <script>
+
+        var clientesBH = 12;
+        var clientesSP = 20;
+        var clientesBA = 8;
+        var clientesMS = 10;
+        var clientesPR = 14;
+
+
+        var faturamentoBH = 1536;
+        var faturamentoSP = 6580;
+        var faturamentoBA = 968;
+        var faturamentoMS = 2410;
+        var faturamentoPR = 1092;
+
+
+        var freteSP = 9;
+        var freteOutrosEstados = 14;
+        var percentualCustoProducao = 20;
+
+
+        var mediaFaturamento = (faturamentoBH + faturamentoSP + faturamentoBA + faturamentoMS + faturamentoPR) /
+            (clientesBH + clientesSP + clientesBA + clientesMS + clientesPR);
+
+
+        var lucroBH = faturamentoBH - (clientesBH * mediaFaturamento * (percentualCustoProducao / 100 + 1));
+        var lucroSP = faturamentoSP - (clientesSP * mediaFaturamento * (percentualCustoProducao / 100 + 1));
+        var lucroBA = faturamentoBA - (clientesBA * mediaFaturamento * (percentualCustoProducao / 100 + 1));
+        var lucroMS = faturamentoMS - (clientesMS * mediaFaturamento * (percentualCustoProducao / 100 + 1));
+        var lucroPR = faturamentoPR - (clientesPR * mediaFaturamento * (percentualCustoProducao / 100 + 1));
+
+
+        console.log("Faturamento médio por cliente nas cinco cidades onde Jéssica mais tem clientes ativos é de R$ " + Math.round(mediaFaturamento));
+
+        console.log("Lucro em Belo Horizonte: R$ " + Math.round(lucroBH));
+        console.log("Lucro em São Paulo: R$ " + Math.round(lucroSP));
+        console.log("Lucro em Salvador: R$ " + Math.round(lucroBA));
+        console.log("Lucro em Campo Grande: R$ " + Math.round(lucroMS));
+        console.log("Lucro em Curitiba: R$ " + Math.round(lucroPR));
+    </script>
+
+</body>
+
+</html>

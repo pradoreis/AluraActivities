@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes de Jéssica</title>
+</head>
+
+<body>
+
+    <script>
+
+        var clientesBH = 12;
+        var clientesSP = 20;
+        var clientesBA = 8;
+        var clientesMS = 10;
+        var clientesPR = 14;
+
+
+        var faturamentoBH = 1536;
+        var faturamentoSP = 6580;
+        var faturamentoBA = 968;
+        var faturamentoMS = 2410;
+        var faturamentoPR = 1092;
+
+
+        var freteSP = 9;
+        var freteOutrosEstados = 14;
+        var percentualCustoProducao = 20;
+
+        var custoProducaoBH = clientesBH * mediaFaturamento * (percentualCustoProducao / 100 + 1);
+        var custoProducaoSP = clientesSP * mediaFaturamento * (percentualCustoProducao / 100 + 1);
+        var custoProducaoBA = clientesBA * mediaFaturamento * (percentualCustoProducao / 100 + 1);
+        var custoProducaoMS = clientesMS * mediaFaturamento * (percentualCustoProducao / 100 + 1);
+        var custoProducaoPR = clientesPR * mediaFaturamento * (percentualCustoProducao / 100 + 1);
+
+
+        var custoFreteBH = freteOutrosEstados * clientesBH;
+        var custoFreteSP = freteSP * clientesSP;
+        var custoFreteBA = freteOutrosEstados * clientesBA;
+        var custoFreteMS = freteOutrosEstados * clientesMS;
+        var custoFretePR = freteOutrosEstados * clientesPR;
+
+        var lucroBH = faturamentoBH - custoProducaoBH - custoFreteBH;
+        var lucroSP = faturamentoSP - custoProducaoSP - custoFreteSP;
+        var lucroBA = faturamentoBA - custoProducaoBA - custoFreteBA;
+        var lucroMS = faturamentoMS - custoProducaoMS - custoFreteMS;
+        var lucroPR = faturamentoPR - custoProducaoPR - custoFretePR;
+
+
+        console.log("Lucro em Belo Horizonte: R$ " + Math.round(lucroBH));
+        console.log("Lucro em São Paulo: R$ " + Math.round(lucroSP));
+        console.log("Lucro em Salvador: R$ " + Math.round(lucroBA));
+        console.log("Lucro em Campo Grande: R$ " + Math.round(lucroMS));
+        console.log("Lucro em Curitiba: R$ " + Math.round(lucroPR));
+    </script>
+
+</body>
+
+</html>

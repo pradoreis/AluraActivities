@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes de Jéssica</title>
+</head>
+
+<body>
+
+    <script>
+
+        var clientesBH = 12;
+        var clientesSP = 20;
+        var clientesBA = 8;
+        var clientesMS = 10;
+        var clientesPR = 14;
+
+
+        var faturamentoBH = 1536;
+        var faturamentoSP = 6580;
+        var faturamentoBA = 968;
+        var faturamentoMS = 2410;
+        var faturamentoPR = 1092;
+
+
+        var mediaBH = faturamentoBH / clientesBH;
+        var mediaSP = faturamentoSP / clientesSP;
+        var mediaBA = faturamentoBA / clientesBA;
+        var mediaMS = faturamentoMS / clientesMS;
+        var mediaPR = faturamentoPR / clientesPR;
+
+
+        document.write("Faturamento médio por cliente:<br>");
+        document.write("Belo Horizonte: R$ " + Math.round(mediaBH) + "<br>");
+        document.write("São Paulo: R$ " + Math.round(mediaSP) + "<br>");
+        document.write("Salvador: R$ " + Math.round(mediaBA) + "<br>");
+        document.write("Campo Grande: R$ " + Math.round(mediaMS) + "<br>");
+        document.write("Curitiba: R$ " + Math.round(mediaPR) + "<br>");
+    </script>
+
+</body>
+
+</html>

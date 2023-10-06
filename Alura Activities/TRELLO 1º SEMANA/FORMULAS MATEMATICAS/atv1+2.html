@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var areaCirculo = function (raio) {
+            return Math.PI * Math.pow(raio, 2);
+        };
+        var areaTriangulo = function (base, altura) {
+            return 0.5 * base * altura;
+        };
+
+        var areaQuadrado = function (lado) {
+            return Math.pow(lado, 2);
+        };
+        var areaRetangulo = function (base, altura) {
+            return base * altura;
+        };
+        var baseRetangulo = 5;
+        var alturaRetangulo = 8;
+
+        var raioCirculo = 4;
+
+        var baseTriangulo = 6;
+        var alturaTriangulo = 10;
+
+        // Calculando as áreas usando as fórmulas armazenadas nas variáveis
+        var areaRetanguloCalculada = areaRetangulo(baseRetangulo, alturaRetangulo);
+        var areaCirculoCalculada = areaCirculo(raioCirculo);
+        var areaTrianguloCalculada = areaTriangulo(baseTriangulo, alturaTriangulo);
+
+        // Exibindo os resultados no console
+        console.log("a) Área do Retângulo:", areaRetanguloCalculada);
+        console.log("b) Área do Círculo:", areaCirculoCalculada);
+        console.log("c) Área do Triângulo Retângulo:", areaTrianguloCalculada);
+
+
+    </script>
+</body>
+
+</html>

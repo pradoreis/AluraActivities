@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function enviarEmailCliente(nome, destino, valorPassagens, diariaHotel, valorGuiaLocal, custoFixo) {
+            
+            const custoTotal = valorPassagens + (diariaHotel * custoFixo) + valorGuiaLocal;
+
+          
+            console.log(`Enviando e-mail para ${nome}`);
+            console.log(`Assunto: Sua viagem para ${destino}`);
+            console.log(`Prezado(a) ${nome},\n\n`);
+            console.log(`Estamos felizes em informar que sua viagem para ${destino} está confirmada!\n`);
+            console.log(`Detalhes da sua viagem:\n`);
+            console.log(`Destino: ${destino}`);
+            console.log(`Valor das passagens: R$ ${valorPassagens.toFixed(2)}`);
+            console.log(`Diária do hotel: R$ ${diariaHotel.toFixed(2)} (por ${custoFixo} dias)`);
+            console.log(`Valor do guia local: R$ ${valorGuiaLocal.toFixed(2)}`);
+            console.log(`Custo total da viagem: R$ ${custoTotal.toFixed(2)}\n`);
+            console.log(`Agradecemos por escolher nossa agência de viagens. Tenha uma excelente viagem!\n`);
+            console.log(`Atenciosamente,\nEquipe da Agência de Viagens`);
+            console.log('-----\n');
+        }
+
+        
+        enviarEmailCliente("João", "Nova Zelândia", 13996, 79.15, 200, 10);
+        enviarEmailCliente("Maria", "Tailândia", 9160, 590, 235, 7);
+        enviarEmailCliente("Pedro", "Costa Rica", 5119, 2300, 3150, 5);
+
+    </script>
+</body>
+
+</html>

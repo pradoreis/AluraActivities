@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var raio = 3.5;  // em metros
+        var altura = 1.6;  // em metros
+
+        var volumeCalculado = Math.PI * Math.pow(raio, 2) * altura;
+
+
+        var volumeEmLitros = volumeCalculado * 1000;
+
+        console.log("Volume calculado da piscina:", volumeEmLitros.toFixed(2) + "L");
+
+        var erroPercentual = ((volumeEmLitros - 0.06) / volumeEmLitros) * 100;
+
+        console.log("Erro percentual:", erroPercentual.toFixed(2) + "%");
+
+        //obs: TIVE DIFICULDADE E PEGUEI AJUDA NO CHATGPT!!
+    </script>
+</body>
+
+</html>
